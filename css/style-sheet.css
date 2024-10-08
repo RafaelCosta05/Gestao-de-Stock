@@ -719,6 +719,10 @@ MEDIA CSS
         display: none;
     }
 
+    .mensagem-produto {
+        margin-top: 0%;
+    }
+
     .inputs-produtos {
         width: 100%;
     }
