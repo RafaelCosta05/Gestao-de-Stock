@@ -153,6 +153,7 @@ function esconderInputs() {
     });
 }
 
+let tdIdProduto = "";
 //Variáveis para os inputs de adicionar/editar
 const nomeProduto = document.querySelector('.nomeProduto');
 let editarNomeProduto = "";
@@ -324,8 +325,15 @@ function adicionarProduto() {
 
     //se a flag passar true significa que vai criar o eletrodomestico
     if(adicionarProdutoBool) {
-        //cria um dia random dinamico
-        const id = 'id_' + Math.random().toString(10).substr(2, 9);
+        let id = "";
+
+        //em caso de estar a criar um produto novo cria um id senão
+        //vai atribuir a variavel "id" o valor que estava na tabela
+        if(tdIdProduto === "") {
+            id = 'id_' + Math.random().toString(10).substr(2, 9);
+        } else {
+            id = tdIdProduto;
+        }
 
         //cria o tr e os td's com os respetivos valores
         let tr = document.createElement('tr');
@@ -338,7 +346,7 @@ function adicionarProduto() {
             <td data-cell="Modelo" class="tdModeloProduto">${tdModeloProduto}</td>
             <td data-cell="Preço" class="tdPrecoProduto">${tdPrecoProduto}</td>
             <td data-cell="Quantidade" class="tdQuantidadeProduto">${tdQuantidadeProduto}</td>
-            <td class="Ações">
+            <td class="actions">
                 <button class="editar" onclick="editarProduto(this)">
                     <i class='bx bx-pencil'></i>
                 </button>
@@ -375,6 +383,7 @@ function editarProduto(button) {
     const produto = button.closest('tr');
 
     //valores das variaveis que estão na tabela
+    tdIdProduto = produto.querySelector('.tdIdProduto').textContent;
     const tdNomeProduto = produto.querySelector('.tdNomeProduto').textContent;
     const tdMarcaProduto = produto.querySelector('.tdMarcaProduto').textContent;
     const tdModeloProduto = produto.querySelector('.tdModeloProduto').textContent;
