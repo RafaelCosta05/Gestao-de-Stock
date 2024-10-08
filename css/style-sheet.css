@@ -563,6 +563,7 @@ MEDIA CSS
 
     .sidebar {
         width: 80px;
+        margin-top: 3rem;
     }
 
     .title-header {
@@ -750,7 +751,6 @@ MEDIA CSS
         width: 100%;
     }
 }
-
 
 /* Responsividade para pagina index */
 @media screen and (max-width: 1006px) {
