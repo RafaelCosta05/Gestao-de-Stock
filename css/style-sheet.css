@@ -398,6 +398,7 @@ input:focus {
     border-radius: var(--border-radius-1);
     margin-left: 4rem;
     background: var(--color-warning);
+    color: var(--color-white);
     font-size: 2rem;
     align-items: center;
 }
