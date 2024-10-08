@@ -177,7 +177,7 @@ BODY
     margin-top: 2rem;
     border-radius: var(--border-radius-2);
     box-shadow: var(--box-shadow);
-    width: 220px;
+    width: 250px;
     box-sizing: border-box;
     z-index: 1;
     transition: all 400ms ease;
