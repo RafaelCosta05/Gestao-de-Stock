@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/js.png" type="image/x-icon">
+    <title>TESTE DE JS</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+    rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="/css/style-sheet.css">
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a id="index" onclick="redirecionar('index')">
+                <h1 class="title-header">TESTE DE <span>Js</span></h1>
+            </a>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp light-mode">light_mode</span>
+                <span class="material-icons-sharp dark-mode">dark_mode</span>
+            </div>
+        </header>
+    
+        <div class="content">
+            <aside class="sidebar">
+                    <a id="stock" onclick="redirecionar('stock')">
+                        <span class="material-icons-sharp">
+                            school
+                            </span>
+                        <h3>Gestão de stock</h3>
+                    </a>
+            </aside>
+            <div class="section">
+                <div class="index-text">
+                    <h1 class="welcome"><span class="bem-vindo">Bem vindo</span> ao sistema do Teste de <span class="atec">Js</span></h1>
+                    <div class="clock" id="clock"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/theme.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/relogio.js"></script>
+</body>
+</html>

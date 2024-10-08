@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/js.png" type="image/x-icon">
+    <title>TESTE DE JS</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+    rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="/css/style-sheet.css">
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a id="index" onclick="redirecionar('index')">
+                <h1 class="title-header">TESTE DE <span>Js</span></h1>
+            </a>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp light-mode">light_mode</span>
+                <span class="material-icons-sharp dark-mode">dark_mode</span>
+            </div>
+        </header>
+    
+        <div class="content">
+            <aside class="sidebar">
+                <a id="stock" onclick="redirecionar('index')">
+                    <span class="material-icons-sharp">
+                        school
+                    </span>
+                    <h3>Gestão de stock</h3>
+                </a>
+            </aside>
+    
+            <section id="stock-list" class="section">
+                <h1 class="titulo">GESTÃO DE <span>STOCK</span></h1>
+                <button class="mostrar-inputs-produto" onclick="mostrarInputs()">Adicionar produto</button>
+                <button class="esconder-inputs-produto" onclick="esconderInputs()"><span class="material-icons-sharp">arrow_back</span></button>
+                <div class="inputs-produtos">
+                    <input type="text" class="nomeProduto" placeholder="Nome" required>
+                    <input type="text" class="marcaProduto" placeholder="Marca" required>
+                    <input type="text" class="modeloProduto" placeholder="Modelo" required>
+                    <input type="number" step="0.10" class="precoProduto" placeholder="Preço" required>        
+                    <input type="number" class="quantidadeProduto" placeholder="Quantidade" required>
+    
+                    <button class="botao-adicionar-produto" onclick="adicionarProduto()">
+                        <i class='bx bx-plus-circle'></i>
+                        <span class="span-botao">Adicionar</span>
+                    </button>
+                </div>
+                <div class="div-pesquisa">
+                    <div class="br"></div>
+                    <input type="text" id="barraPesquisa" placeholder="Pesquisar pelo nome do produto..." oninput="pesquisar()">                
+                </div>
+                <p class="mensagem-produto"></p>
+                <div class="icons-ordenar">
+                    <button class="descrescente" onclick="ordenar('desc')">
+                        <span class="material-icons-sharp">arrow_upward</span>
+                    </button>
+                    <button class="crescente" onclick="ordenar('asc')">
+                        <span class="material-icons-sharp">arrow_downward</span>
+                    </button>
+                    <button class="search" onclick="mostrarBarraPesquisa(this)">
+                        <span class="material-icons-sharp">search</span>
+                    </button>
+                </div>
+                <table class="eletrodomesticos">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Preço</th>
+                            <th>Qtd Stock</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="produtoTable"></tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+    
+    <script src="/scripts/stock.js"></script>
+    <script src="/scripts/theme.js"></script>
+    <script src="/scripts/script.js"></script>
+</body>
+</html>
