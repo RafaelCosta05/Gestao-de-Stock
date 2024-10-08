@@ -183,10 +183,10 @@ BODY
     transition: all 400ms ease;
 }
 
-.sidebar:hover {
+/* .sidebar:hover {
     box-shadow: none;
     transition: all 400ms ease;
-}
+} */
 
 .sidebar h3 {
     font-weight: 600;
