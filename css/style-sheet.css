@@ -240,6 +240,7 @@ BODY
 INDEX CSS - RELÓGIO
 ============================= */
 .section-index {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -276,6 +277,10 @@ INDEX CSS - RELÓGIO
 
 .link {
    padding: 3rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
 }
 
 .link a{
@@ -582,19 +587,6 @@ MEDIA CSS
     .sidebar a:hover span {
         margin-left: 0;
     }
-    
-    .index-text {
-        text-align: center;
-        white-space: nowrap;
-    }
-    .welcome {
-        font-size: 4.5rem;
-        display: inline-block;
-    }
-
-    .clock {
-        font-size: 3rem;
-    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -782,47 +774,5 @@ MEDIA CSS
 
     .link{
         font-size: 0.8rem; 
-    }
-}
-
-@media screen and (max-width: 738px) {
-    .welcome {
-        font-size: 2.5rem;
-    }
-
-    .clock {
-        font-size: 2.5rem; 
-    }
-
-    .link{
-        font-size: 0.7rem; 
-    }
-}
-
-@media screen and (max-width: 644px) {
-    .welcome {
-        font-size: 2rem;
-    }
-
-    .clock {
-        font-size: 2rem; 
-    }
-
-    .link{
-        font-size: 0.6rem; 
-    }
-}
-
-@media screen and (max-width: 438px) {
-    .welcome {
-        font-size: 1.5rem;
-    }
-
-    .clock {
-        font-size: 1.5rem; 
-    }
-
-    .link{
-        font-size: 0.5rem; 
     }
 }
