@@ -379,6 +379,13 @@ input:focus {
     border-radius: var(--border-radius-1);
     margin-left: 4rem;
     background: var(--color-warning);
+    font-size: 2rem;
+    align-items: center;
+}
+
+.botao-adicionar-produto:hover i{
+    color: var(--color-dark);
+    transition: all ease 200ms;
 }
 
 .botao-adicionar-produto span {
@@ -479,7 +486,7 @@ table tbody tr:last-child td {
 
 table tbody tr td.actions button:hover i {
     color: var(--color-dark);
-    transition: all ease 300ms;
+    transition: all ease 200ms;
 }
 
 
