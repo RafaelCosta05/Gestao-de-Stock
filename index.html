@@ -19,12 +19,23 @@
             <a id="index" onclick="redirecionar('index')">
                 <h1 class="title-header">TESTE DE <span>Js</span></h1>
             </a>
-            <div class="theme-toggler">
-                <span class="material-icons-sharp light-mode">light_mode</span>
-                <span class="material-icons-sharp dark-mode">dark_mode</span>
+            <div class="header-direito">
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp light-mode">light_mode</span>
+                    <span class="material-icons-sharp dark-mode">dark_mode</span>
+                </div>
+                <div class="bx bx-menu" id="menu-icon"></div>
             </div>
         </header>
-    
+        <nav class="navbar" id="navbar">
+            <a class="index active" id="index" onclick="redirecionarNav('index')">
+                <h3>Ínicio</h3>
+            </a>
+            <a class="stock" onclick="redirecionarNav('stock')">
+                <h3>Stock</h3>
+            </a>
+        </nav>
+        
         <div class="content">
             <aside class="sidebar">
                     <a id="stock" onclick="redirecionar('stock')">
