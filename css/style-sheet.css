@@ -177,16 +177,16 @@ BODY
     margin-top: 2rem;
     border-radius: var(--border-radius-2);
     box-shadow: var(--box-shadow);
-    width: 250px;
+    width: 220px;
     box-sizing: border-box;
     z-index: 1;
     transition: all 400ms ease;
 }
 
-/* .sidebar:hover {
+.sidebar:hover {
     box-shadow: none;
     transition: all 400ms ease;
-} */
+}
 
 .sidebar h3 {
     font-weight: 600;
@@ -240,11 +240,10 @@ BODY
 INDEX CSS - RELÓGIO
 ============================= */
 .section-index {
-    width: 100%;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     justify-content: center;
-    box-sizing: border-box;
 }
 
 .welcome {
