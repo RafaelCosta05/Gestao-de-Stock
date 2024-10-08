@@ -12,8 +12,8 @@ function redirecionarNav(id) {
     a.setAttribute('href', './' + id_a + '.html');
 }
 
-//Evet«nto click no icon para mostar navbar
-let menuIcon = document.querySelector('#menu-icon');
+//Evento click no icon para mostar navbar
+const menuIcon = document.querySelector('#menu-icon');
 const navbar = document.getElementById('navbar');
 
 menuIcon.onclick = () => {

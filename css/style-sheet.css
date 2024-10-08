@@ -672,10 +672,6 @@ MEDIA CSS
         transition: top 0.3s;  
     }
 
-    .navbar.hidden {
-        display: none;                 /* Esconde a navbar movendo-a para cima */
-    }
-
     .navbar.active {
         transition-delay: 0;
         display: flex;
