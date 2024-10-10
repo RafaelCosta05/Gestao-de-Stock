@@ -1049,6 +1049,12 @@ MEDIA CSS
         width: 93%;
     }
 }
+
+@media screen and (max-width: 430px) {
+    .username, .password {
+        margin-top: 1rem;
+    }
+}
 /* =============================
 @KEYFRAMES PARA LOGIN
 ============================= */
