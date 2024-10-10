@@ -1,13 +1,22 @@
 
 // Função para obter cookies
-function getCookie(name) {
+function getCookie(username) {
+    //faz um split dos cookies por ";", porque
+    //os cookies são armazenados num string separados por ";"
     let cookies = document.cookie.split("; ");
+    //percorre o array dos cookies
     for (let i = 0; i < cookies.length; i++) {
+        //verifica o cookie divindo entre nome e valor pois,
+        //sao armazenados nome=valor
         let cookie = cookies[i].split("=");
-        if (cookie[0] === name) {
+        //cookie[0], e o username armazenado na cookie, entao verifica,
+        //se e igual ao valor que foi enviada para esta função 
+        if (cookie[0] === username) {
             return cookie[1];
+            //se corresponder envia o valor da cookie, cookie[1]
         }
     }
+    //senao encontrar retorna nulo
     return null;
 }
 
