@@ -421,7 +421,6 @@ INDEX CSS - RELÓGIO
     justify-content: center;
     width: calc(100% - 220px);
     margin-left: 230px;
-    margin-top: 2.5rem;
     flex-grow: 1;
     padding: 20px;
     box-sizing: border-box;
@@ -741,7 +740,7 @@ FOOTER
 .footer {
     display: flex;
     font-size: 1.8rem;
-    padding: 0 3rem 3rem 3rem;
+    padding: 0 3rem 5rem 3rem;
     justify-content: end;
     align-items: center;
 }
