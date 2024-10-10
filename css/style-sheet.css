@@ -1055,6 +1055,10 @@ MEDIA CSS
     .password {
         margin-top: 0;
     }
+
+    .botao-login {
+        margin-top: 0;
+    }
 }
 /* =============================
 @KEYFRAMES PARA LOGIN
