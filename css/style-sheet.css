@@ -231,7 +231,7 @@ LOGIN
 HEADER
 ============================= */
 .header {
-    background: var(--color-background);
+    background: transparent;
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -775,7 +775,8 @@ MEDIA CSS
         padding-left: 14px;
     }
 
-    .section {
+    .section,
+    .section-index {
         width: calc(100% - 80px);
         margin-left: 90px;
     }
@@ -904,11 +905,12 @@ MEDIA CSS
 }
 
 @media screen and (max-width: 519px) {
-    .section {
+    .section,
+    .section-index {
         width: 100%;
-        margin-left: 0
-;
+        margin-left: 0;
     }
+
     .header a {
         padding: 0%;
     }
@@ -919,7 +921,7 @@ MEDIA CSS
         justify-content: space-around;
         width: 100%;
         top: 6rem;
-        margin-top: 2rem;
+        margin-top: 5rem;
         left: 0;
         box-shadow: var(--box-shadow);
         border-radius: var(--border-radius-1);
@@ -939,6 +941,10 @@ MEDIA CSS
     }
 
     .navbar a.active {
+        color: var(--color-warning);
+    }
+
+    .navbar a:hover {
         color: var(--color-warning);
     }
 
