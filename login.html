@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/js.png" type="image/x-icon">
+    <title>Teste de Js | Login</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+    rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/style-sheet.css">
+</head>
+<body>
+    <div class="container-login">
+        <header class="header">
+            <a id="index" onclick="redirecionar('index')">
+                <h1 class="title-header">TESTE DE <span>Js</span></h1>
+            </a>
+            <div class="header-direito">
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp light-mode">light_mode</span>
+                    <span class="material-icons-sharp dark-mode">dark_mode</span>
+                </div>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </header>
+
+        <div class="content-login">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-image">
+                        <img src="images/js-file.png">
+                    </div>
+                    <div class="card-form">
+                        <h2>Login</h2>
+                        <p class="mensagem-login"></p>
+                        <form id="loginForm">
+                            <input type="text" class="username" id="username" placeholder="Username" required><br><br>
+                            <input type="password" class="password" id="password" placeholder="Password" required><br><br>
+                            <button class="botao-login" type="submit">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/login.js"></script>
+    <script src="scripts/theme.js"></script>
+    <!-- <script src="scripts/cookies.js"></script> -->
+</body>
+</body>
+</html>

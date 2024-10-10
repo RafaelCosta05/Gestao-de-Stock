@@ -34,6 +34,9 @@
             <a class="stock active" onclick="redirecionarNav('stock')">
                 <h3>Stock</h3>
             </a>
+            <a class="stock" onclick="logout()">
+                <h3>Logout</h3>
+            </a>
         </nav>
         
         <div class="content">
@@ -43,6 +46,12 @@
                         inventory
                     </span>
                     <h3>Gestão de stock</h3>
+                </a>
+                <a id="stock" onclick="logout()">
+                    <span class="material-icons-sharp">
+                        logout
+                        </span>
+                    <h3>Logout</h3>
                 </a>
             </aside>
     
@@ -95,9 +104,18 @@
             </div>
         </div>
     </div>
-    
+    <footer class="footer">
+        Rafael Costa @ copyright
+        <div class="icons-footer">
+            <i class='bx bxl-html5'></i>
+            <i class='bx bxl-css3' ></i>
+            <i class='bx bxl-javascript' ></i>
+        </div>
+    </footer>
+
     <script src="scripts/stock.js"></script>
     <script src="scripts/theme.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/cookies.js"></script>
 </body>
 </html>

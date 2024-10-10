@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
+    --color-html: #e34c26;
+    --color-css: #2965f1;
+    --color-js: #f7df1e;
     --color-danger: #FF0060;
     --color-success: #1B9C85;
     --color-warning: #F7D060;
@@ -65,6 +68,160 @@ a {
     cursor: pointer;
 }
 
+/* =============================
+LOGIN
+============================= */
+.container-login {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 3rem;
+}
+
+.content-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 60%;
+    height: 60%;
+    margin-top: 1.5rem;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--box-shadow);
+    font-size: 2.6rem;
+    border-spacing: 0 0;
+}
+
+.card::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(from var(--angle), transparent 70%, var(--color-warning));
+    border-radius: var(--card-border-radius);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 4px;
+    animation: 3s spin linear infinite;
+}
+
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.card-image  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.card-image img {
+    width: 100%;
+}
+
+.card-form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.spanUsername {
+    color: var(--color-success);
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensagem-login {
+    font-size: 1.9rem;
+    color: var(--color-danger);
+    margin-top: 2rem;
+    min-height: 2rem;
+    visibility: hidden;
+}
+
+.mensagem-login.visible {
+    visibility: visible;
+}
+
+.username,
+.password {
+    font-size: 1.7rem;
+    background: var(--color-background);
+    width: 80%;
+    height: 4rem;
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow);
+    padding-left: 10px;
+    margin-top: 4rem;
+    transition: all 0.5s ease;
+}
+
+.username:focus,
+.password:focus {
+    border-color: gray;
+    box-shadow: 0 0 5px var(--color-info-dark);
+}
+
+.erro-login:focus {
+    border-color: gray;
+    box-shadow: 0 0 5px var(--color-danger);
+    transition: all 0.5s ease-in-out;
+}
+
+.botao-login {
+    margin-top: 3.5rem;
+    display: none;
+    margin-bottom: 1.8rem;
+    width: 50%;
+    height: 40px;
+    border: 2px solid  var(--color-warning);
+    color: var(--color-warning);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    border-radius: var(--border-radius-1);
+}
+
+.botao-login:hover {
+    transition: all 400ms ease;
+    border-radius: var(--card-border-radius);
+    background: var(--color-warning);
+    color: var(--color-white);
+}
+
 
 /* =============================
 HEADER
@@ -73,12 +230,14 @@ HEADER
     background: transparent;
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    position: fixed;
     align-items: center;
+    text-align: end;
+    width: 96%;
     height: 4rem;
     z-index: 100;
     transition: all ease 300ms;
-    flex-shrink: 0;
+    padding-bottom: 3rem;
 }
 
 .header a {
@@ -99,12 +258,6 @@ HEADER
     color: var(--color-warning);
 }
 
-.header-direito {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
 #menu-icon {
     font-size: 3.6rem;
     color: var(--color-dark);
@@ -119,6 +272,12 @@ HEADER
 /* =============================
 SWITCH FOR THEME
 ============================= */
+.header-direito {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: end;
+}
 
 .theme-toggler {
     background: var(--color-light);
@@ -159,11 +318,14 @@ BODY
     flex-grow: 1;
     gap: 20px;
     z-index: 1;
+    margin-top: 4rem;
  }
 
  .section {
     display: flex;
     flex-direction: column;
+    width: calc(100% - 220px);
+    margin-left: 230px;
     margin-top: 2.5rem;
     flex-grow: 1;
     padding: 20px;
@@ -173,14 +335,18 @@ BODY
 }
 
 .sidebar {
+    display: flex;
+    flex-direction: column;
     background: var(--color-white);
     margin-top: 2rem;
     border-radius: var(--border-radius-2);
     box-shadow: var(--box-shadow);
     width: 220px;
+    height: 85vh;
     box-sizing: border-box;
     z-index: 1;
     transition: all 400ms ease;
+    position: fixed;
 }
 
 .sidebar:hover {
@@ -234,6 +400,12 @@ BODY
 
 .sidebar a:hover span {
     margin-left: 1rem;
+}
+
+.sidebar a:last-child {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
 }
 
 /* =============================
@@ -552,13 +724,50 @@ span.span-botao {
     background: var(--color-danger);
 }
 
+/* =============================
+FOOTER
+============================= */
+.footer {
+    display: flex;
+    font-size: 1.8rem;
+    padding: 0 3rem 3rem 3rem;
+    justify-content: center;
+    align-items: center;
+}
 
+.icons-footer {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.icons-footer i{
+    font-size: 2.5rem;
+}
+
+.icons-footer i.bx.bxl-html5 {
+    color: var(--color-html);
+}
+
+.icons-footer i.bx.bxl-css3 {
+    color: var(--color-css);
+}
+
+.icons-footer i.bx.bxl-javascript {
+    color: var(--color-js);
+}
+ 
 /* =============================
 MEDIA CSS
 ============================= */
 @media screen and (max-width: 1200px) {
     .header a {
         padding-left: 14px;
+    }
+
+    .section {
+        width: calc(100% - 80px);
+        margin-left: 90px;
     }
 
     .sidebar {
@@ -626,19 +835,36 @@ MEDIA CSS
 }
 
 @media screen and (max-width: 828px) {
-    table {
-        padding: 0%;
+    .header {
+        width: 91%;
     }
-    table tbody tr:hover {
-        background: none;
+
+    table {
+        font-size: 1rem;
+        background: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+        font-size: 2rem;
     }
 
     th {
         display: none;
     }
 
-    table tbody tr:nth-of-type(2n) {
-        background: var(--color-light);
+    table tbody tr:hover {
+        background: none;
+    }
+
+    table tbody tr {
+        display:block;
+        text-align: left;
+        /* width: 100%; */
+        margin-bottom: 2rem;
+        background: var(--color-white);
+        border-radius: var(--card-border-radius);
+        padding: var(--card-padding);
+        box-shadow: var(--box-shadow);
     }
 
     table tbody td {
@@ -668,6 +894,11 @@ MEDIA CSS
 }
 
 @media screen and (max-width: 519px) {
+    .section {
+        width: 100%;
+        margin-left: 0
+;
+    }
     .header a {
         padding: 0%;
     }
@@ -752,7 +983,9 @@ MEDIA CSS
     }
 }
 
-/* Responsividade para pagina index */
+/* =============================
+@MEDIA PARA O INDEX
+============================= */
 @media screen and (max-width: 1006px) {
     .welcome {
         font-size: 3.5rem;
@@ -779,4 +1012,38 @@ MEDIA CSS
     .link{
         font-size: 0.8rem; 
     }
+}
+
+
+/* =============================
+@MEDIA PARA O LOGIN
+============================= */
+@media screen and (max-width: 870px) {
+    .card-image {
+        display: none;
+    }
+
+    .card-form {
+        width: 100%;
+    }
+}
+
+
+/* =============================
+@KEYFRAMES PARA LOGIN
+============================= */
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }

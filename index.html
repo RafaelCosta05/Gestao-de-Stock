@@ -34,6 +34,9 @@
             <a class="stock" onclick="redirecionarNav('stock')">
                 <h3>Stock</h3>
             </a>
+            <a class="stock" onclick="logout()">
+                <h3>Logout</h3>
+            </a>
         </nav>
         
         <div class="content">
@@ -44,13 +47,17 @@
                             </span>
                         <h3>Gestão de stock</h3>
                     </a>
+                    <a class="logout-link" onclick="logout()">
+                        <span class="material-icons-sharp">
+                            logout
+                            </span>
+                        <h3>Logout</h3>
+                    </a>
             </aside>
             <div class="section-index">
                 <div class="index-text">
                     <h1 class="welcome">
-                        <span class="bem-vindo">Bem vindo</span> 
-                        ao sistema do Teste de 
-                        <span class="atec">Js</span>
+                        <!-- <span class="bem-vindo">Bem vindo</span>  -->
                     </h1>
                     <div class="clock" id="clock"></div>
                     <div class="link">
@@ -66,6 +73,7 @@
 
     <script src="scripts/theme.js"></script>
     <script src="scripts/script.js"></script>
-    <script src="scripts/relogio.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/cookies.js"></script>
 </body>
 </html>

@@ -1,3 +1,7 @@
+window.onload = function() {
+    apresentaSaudacao();
+}
+
 function updateClock() {
     const now = new Date();
 
@@ -20,3 +24,15 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 updateClock();
+
+
+const correctUsername = "Admin";  // substitua com seu nome real
+const correctPassword = "Admin@0011";  // escolha sua senha
+
+const h1Saudacao = document.querySelector('.welcome');
+
+function apresentaSaudacao() {
+    console.log(h1Saudacao);
+    h1Saudacao.style.display = "block";
+    h1Saudacao.innerHTML = `Bem vindo, <span class="spanUsername">${correctUsername}</span>`;
+}
