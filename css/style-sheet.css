@@ -878,6 +878,10 @@ MEDIA CSS
         box-shadow: var(--box-shadow);
     }
 
+    table tbody tr:hover {
+        background: var(--color-white);
+    }
+
     table tbody td {
         border-bottom: none;
         display: block;
