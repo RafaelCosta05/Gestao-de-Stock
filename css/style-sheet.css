@@ -88,6 +88,10 @@ LOGIN
     margin-top: 1rem;
 }
 
+.title-header-login span{
+    color: var(--color-warning);
+}
+
 .card {
     display: flex;
     justify-content: center;
@@ -227,7 +231,7 @@ LOGIN
 HEADER
 ============================= */
 .header {
-    background: transparent;
+    background: var(--color-background);
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -237,7 +241,6 @@ HEADER
     height: 4rem;
     z-index: 100;
     transition: all ease 300ms;
-    padding-bottom: 3rem;
 }
 
 .header a {
@@ -277,6 +280,7 @@ SWITCH FOR THEME
     align-items: center;
     gap: 1rem;
     text-align: end;
+    padding-right: 3rem;
 }
 
 .theme-toggler {
@@ -414,8 +418,15 @@ INDEX CSS - RELÓGIO
 .section-index {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     justify-content: center;
+    width: calc(100% - 220px);
+    margin-left: 230px;
+    margin-top: 2.5rem;
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 0;
 }
 
 .welcome {
@@ -731,7 +742,7 @@ FOOTER
     display: flex;
     font-size: 1.8rem;
     padding: 0 3rem 3rem 3rem;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 
@@ -1028,7 +1039,11 @@ MEDIA CSS
     }
 }
 
-
+@media screen and (max-width: 540px) {
+    .card {
+        width: 93%;
+    }
+}
 /* =============================
 @KEYFRAMES PARA LOGIN
 ============================= */
