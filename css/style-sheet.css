@@ -870,7 +870,6 @@ MEDIA CSS
     table tbody tr {
         display:block;
         text-align: left;
-        /* width: 100%; */
         margin-bottom: 2rem;
         background: var(--color-white);
         border-radius: var(--card-border-radius);
