@@ -1051,7 +1051,8 @@ MEDIA CSS
 }
 
 @media screen and (max-width: 430px) {
-    .username, .password {
+    .username, 
+    .password {
         margin-top: 1rem;
     }
 }
